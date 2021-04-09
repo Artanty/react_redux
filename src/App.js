@@ -1,6 +1,6 @@
 import React from "react";
 import Variables from "./components/variables";
-import Comments from "./components/comments";
+import Comments from "./components/comments/comments";
 
 function App() {
 
