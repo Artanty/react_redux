@@ -1,6 +1,6 @@
 import React from 'react';
 import ApprovalCard from "../comments/approvalCard";
-
+import SeasonDisplay from "./seasonDisplay";
 
 class Geolocation extends React.Component {
     constructor(props){
@@ -16,7 +16,7 @@ class Geolocation extends React.Component {
         }
 
         if(!this.state.errorMessage && this.state.lat){
-            return <div>Latitude: {this.state.lat}</div>;
+            return <SeasonDisplay lat={this.state.lat} />
         }
 
         return <div>Loading...</div>;
