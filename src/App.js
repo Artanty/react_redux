@@ -1,18 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 
-import React from "react";
+import React, { useState } from "react";
 import Field from './components/field';
 import Languages from './components/languages';
 import Translate from './components/translate';
 
 function App() {
+  const [language, setLanguage] = useState('ru');
+  const [text, setText] = useState('');
+
   return ( 
     <div>
-      <Field/>
-      <Languages/>
+      <Field label="Enter English" onChange={setText} value={text} />
+      <Languages language={language} onLanguageChange={setLanguage} />
       <hr />
-      <Translate/>
+      <Translate text={text} language={language}/>
     </div>
   );
 }
