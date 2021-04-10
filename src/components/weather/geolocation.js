@@ -1,6 +1,7 @@
 import React from 'react';
 import ApprovalCard from "../comments/approvalCard";
 import SeasonDisplay from "./seasonDisplay";
+import Spinner from "./Spinner";
 
 class Geolocation extends React.Component {
     constructor(props){
@@ -19,7 +20,7 @@ class Geolocation extends React.Component {
             return <SeasonDisplay lat={this.state.lat} />
         }
 
-        return <div>Loading...</div>;
+        return <Spinner message="Please accept location request" />;
 
     }
 
