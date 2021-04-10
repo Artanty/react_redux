@@ -2,12 +2,13 @@ import React from "react";
 import Variables from "./components/variables";
 import Comments from "./components/comments/comments";
 import Geolocation from "./components/weather/geolocation";
+import Search from "./components/search/Search";
 
 function App() {
 
   return ( 
     <div>
-        <Geolocation/>
+        <Search/>
     </div>
 
   );
